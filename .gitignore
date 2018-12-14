@@ -240,3 +240,6 @@ TSWLatexianTemp*
 
 # generated if using elsarticle.cls
 *.spl
+
+# macOS redundant file
+.DS_Store
