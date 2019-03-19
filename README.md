@@ -7,7 +7,7 @@
 
 This is a generalized lab report template for South China Normal University, which satisfies average requirements of general usage, such as lab report should be performed to CS, SCNU. Please substitude the style to meet requirements of your own academy.
 
-本模板的编译环境为`XeLaTeX `，使用了`ctex`作为基础类，这是由于\XeLaTeX 对Unicode有直接的支持，以实现编译中文。诸多的命令可以参考ctex文档。
+本模板的编译环境为`XeLaTeX`，使用了`ctex`作为基础类，这是由于\XeLaTeX 对Unicode有直接的支持，以实现编译中文。诸多的命令可以参考ctex文档。
 
 This template should be compiled with `XeLaTeX` engine because it is based on `ctex` package to satisfied requirements of support to Unicode especially word written in CJK. 
 
@@ -15,12 +15,18 @@ This template should be compiled with `XeLaTeX` engine because it is based on `c
 
 You can use `xeCJK` package to customize your own font style, such as Noto Sans CJK.
 
-如果需要使用代码功能，需要将\texttt{$\backslash$usepackage\\{minted\\}}行解除注释并在其中添加：
+如果需要使用代码功能，需要将`\usepackage{minted}`行解除注释并在其中添加：
+
+If you want to insert code into your lab report, you should decoment the line `\usepackage{minted}` and add the compile argument below:
 
 ```latex
     "--shell-escape"
 ```
+
 具体参数需要根据minted进行修改，一般的用例为：
+
+Any stuff related to minted would be clarified by minted's document.
+
 ```latex
 \begin{minted}[mathescape,
     linenos,
@@ -32,4 +38,4 @@ You can use `xeCJK` package to customize your own font style, such as Noto Sans 
 
 如果使用了目录列表，该文档需要被编译两遍。
 
-If TOC be settled, you should compile you doc twice.
+If TOC be settled, you should compile the doc twice.
