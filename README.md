@@ -25,7 +25,7 @@ If you want to insert code into your lab report, you should decoment the line `\
 
 具体参数需要根据minted进行修改，一般的用例为：
 
-Any stuff related to minted would be clarified by minted's document.
+Any stuff related to minted would be clarified by minted's document, and general usage shows below: 
 
 ```latex
 \begin{minted}[mathescape,
