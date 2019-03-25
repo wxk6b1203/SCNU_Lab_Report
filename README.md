@@ -4,7 +4,7 @@
 + status: available, but need to make it better. A template is of article.pdf.
 
 1. 概述 （abstract）
-本实验报告封面模板是一般性的实验报告封面，符合一般的实验要求，例如计算机学院本科的诸多实验报告。本模板尚未结构化，仅作为一般模板使用。如产生学术纠纷与损失，本模板及其贡献者概不负责。请根据学院/学校要求，进行一定的修改。
+本实验报告封面模板是一般性的实验报告封面，符合一般的实验要求，例如计算机学院本科的诸多实验报告。本模板尚未结构化，仅作为一般模板使用。使用结果需要您自行承担。请根据学院/学校要求，进行一定的细节修改。
 
 This is a generalized lab report template for South China Normal University, which satisfies average requirements of general usage, such as lab report should be performed to CS, SCNU. Please substitude the style to meet requirements of your own academy.
 
