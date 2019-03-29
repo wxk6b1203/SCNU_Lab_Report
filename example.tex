@@ -138,7 +138,7 @@
 
 \titleline{班\hspace{2em}级：16级 1 班}
 
-\titleline{姓\hspace{2em}名： 王 五}
+\titleline{姓\hspace{2em}名： 王老五}
 
 \titleline{学\hspace{2em}号：20112101010}
 }
@@ -173,23 +173,59 @@
 
 %% abstract
 \onehalfspacing
-【摘要】
+【摘要】本实验报告封面是一般性的实验报告封面，符合一般的实验要求，例如计算机学院本科的诸多实验报告。本模板尚未结构化，仅作为一般模板使用。如产生学术纠纷与损失，本模板及其贡献者概不负责。
 
 \doublespacing
-\section{Section1}
+\section{概述}
+本实验报告模板处于一般状态，尚未很好地进行结构化整改。课业繁忙，难以寻找时间进行整改。作为单文件模板使用，是没有问题的。
 
+\section{编译环境}
+本模板的编译环境为\XeLaTeX ，使用了ctex作为基础类，这是由于\XeLaTeX 对Unicode有直接的支持，以实现编译中文。诸多的命令可以参考ctex文档。
 
-\section{Section2}
+\section{自定义字体}
+文档可以使用\texttt{xeCJK}宏包来自定义字体，以使用自己的字体例如微软雅黑等。
 
 \section{目录}
+解除注释 \texttt{table of content} 行可以实现自动添加目录，在生成目录的时候需要使用\XeLaTeX 编译两遍。
 
 \section{代码}
+如果需要使用代码功能，需要将\texttt{$\backslash$usepackage\{minted\}}行解除注释并在其中添加：
+\begin{minted}[mathescape,
+    linenos,
+    numbersep=6pt,
+    frame=lines,
+    framesep=2mm]{json}
+    "--shell-escape"
+\end{minted}
 
 \section{图片}
+图片的使用是非常一般的，但需留意自动生成的图片顺序。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[page=1,width=0.75\textwidth]{f1.pdf}
+    \caption{图片示例}
+\end{figure}
 
 \section{表格}
+利用array宏包，自定义表格宽度。横线用hline给出，竖线在tabular上用竖线给出。同时必须留意表格的每一行都要用两个反斜杠$\backslash\backslash$隔开。
 
-
+\begin{table}
+    \centering
+    \begin{tabular}{ | p{1.5cm}<{\centering} | p{2cm}<{\centering} | p{3cm}<{\centering} | p{5cm}<{\centering} |}
+        \hline
+        key         & type      & description       & constraint \\ 
+        \hline
+        sid         & INT       & id of salesman    & PRIMARY KEY AUTO\_INCREMENT  \\ 
+        \hline 
+        s\_name      & VARCHAR   & name of salesman  & UNIQUE  \\ 
+        \hline 
+        s\_email     & VARCHAR   & email             & UNIQUE \\
+        \hline
+        password    & VARCHAR   & SHA3-256          & \\
+        \hline
+    \end{tabular}
+    \caption{TABLE salesman}
+\end{table}
 
 \begin{workscited}
 
