@@ -18,7 +18,7 @@
 \usepackage{svg}
 \usepackage{minted}
 \usepackage{bm}
-\usepackage{xltxtra,xunicode}
+\usepackage{xltxtra, xunicode}
 \geometry{a4paper,top=1.0in, bottom=1.0in, left=1.0in, right=1.0in}
 
 
@@ -63,7 +63,7 @@
 \pagestyle{fancy}
 \lhead{}
 \chead{}
-\rhead{\XeLaTeX \ \ \thepage}
+\rhead{\thepage}
 \lfoot{}
 \cfoot{}
 \rfoot{}
@@ -76,7 +76,7 @@
 \newcommand{\titleline}[1]{\hspace*{6em} #1 \\}
 \newcommand*{\blankpage}{%
 \vspace*{\fill}
-{\centering\fontsize{32pt}{64pt} This page is intentionally left blank.\par}
+{\centering\fontsize{32pt}{64pt}\par}
 \vspace{\fill}}
 \makeatletter
 \renewcommand*{\cleardoublepage}{\clearpage\if@twoside \ifodd\c@page\else
@@ -103,108 +103,15 @@
 \scshape
 
 
-% Cover page
-\begin{center}
-\vspace*{0.6cm}
-\includegraphics[width=0.65\textwidth]{./logo.jpg}
+\input{cover/cover}
 
-\doublespacing
-\fontsize{18pt}{2em}\bf 
-本科学生实验（实践）报告\\
-\vspace{1em}
-院系：计算机学院 
-\hspace{2ex}
-软件学院
-\end{center}
-
-\begin{flushleft}
-
-\setlength{\parindent}{2em}
-\bf
-{\fontsize{14pt}{18pt}
-% \doublespacing
-
-\linespread{1.5}\selectfont
-~\\
-\titleline{实验课程：科技文献阅读与写作}
-
-\titleline{实验项目：符合华南师大一般要求的实验报告封面}
-
-\titleline{指导老师：PhD. Zhu}
-~\\
-\titleline{开课时间：2018 ～ 2019年度第 1 学期}
-
-\titleline{专\hspace{2em}业：网络工程}
-
-\titleline{班\hspace{2em}级：16级 1 班}
-
-\titleline{姓\hspace{2em}名： 王 五}
-
-\titleline{学\hspace{2em}号：20112101010}
-}
-\end{flushleft}
-
-% Footer
-\begin{center}
-\vspace{3cm}
-\fontsize{14pt}{21pt}
-\bf 华南师范大学教务处
-\end{center}
-
-\end{titlepage}
-
-\blankpage
 \newpage
 % table
 \tableofcontents
 
 \newpage
 
-%%%%Title
-\begin{center}
-\zihao{3}
-\tt 符合华南师大一般要求的实验报告封面
-\end{center}
-\vspace{6pt}
-%%%%Changes paragraph indentation to 2em (2 CJK character)
-\setlength{\parindent}{2em}
-
-%%%%Begin body of paper here
-
-%% abstract
-\onehalfspacing
-【摘要】
-
-\doublespacing
-\section{Section1}
-
-
-\section{Section2}
-
-\section{目录}
-
-\section{代码}
-
-\section{图片}
-
-\section{表格}
-
-
-
-\begin{workscited}
-
-    \bibent
-    参考文件引用了MLA style模板，如果不喜欢，可以注释掉并且使用\texttt{thebibliography}宏包。
-    
-    \bibent
-    Baker, Gladys L., Wayne D. Rasmussen, Vivian Wiser, and Jane M. Porter. \textit{Century of Service: The First 100 Years of the United States Department of Agriculture.}[Federal Government], 1996. Print.
-    
-    \bibent
-    Danhof, Clarence H. \textit{Change in Agriculture: The Northern United States, 1820-1870.} Cambridge: Harvard UP, 1969. Print.
-    
-    \bibent
-    张三，李四：椰子的一百种吃法，《中国椰子协会》第一期02～12页
-    
-\end{workscited}
+\input{body/caption}
+\input{body/body}
 
 \end{document}
